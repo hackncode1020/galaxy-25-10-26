@@ -1,0 +1,28 @@
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;background:#02010a;overflow:hidden;touch-action:none;-webkit-user-select:none;user-select:none;
+font-family:Inter,"SF Pro Display",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#eaf0ff}
+canvas{position:fixed;inset:0;width:100%;height:100%;display:block;cursor:grab}
+canvas:active{cursor:grabbing}
+#flash{position:fixed;inset:0;pointer-events:none;opacity:0;
+background:radial-gradient(circle at var(--x,50%) var(--y,50%),rgba(255,255,255,.95),rgba(170,200,255,.55) 18%,rgba(120,80,255,.15) 45%,transparent 70%)}
+.ui{position:fixed;z-index:2;pointer-events:none}
+.top{top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:flex-start;
+padding:calc(18px + env(safe-area-inset-top)) 18px 0}
+.brand{display:flex;gap:10px;align-items:center}
+.logo{width:28px;height:28px;border-radius:50%;
+background:radial-gradient(circle at 50% 50%,#fff 0 8%,#ffd38a 14%,#ff7ab8 34%,#6a5cff 58%,transparent 72%);
+box-shadow:0 0 18px rgba(140,110,255,.8);animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+h1{font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+background:linear-gradient(90deg,#fff,#c9b8ff 60%,#8fd3ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+#stat{font-size:11px;opacity:.6;letter-spacing:.06em;margin-top:2px;font-variant-numeric:tabular-nums}
+#snd{pointer-events:auto;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.18);
+background:rgba(20,16,50,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;font-size:18px;cursor:pointer}
+#hint{left:50%;bottom:calc(64px + env(safe-area-inset-bottom));transform:translateX(-50%);white-space:nowrap;
+font-size:12.5px;letter-spacing:.03em;padding:9px 16px;border-radius:999px;background:rgba(20,16,50,.42);
+border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:opacity 1.2s}
+#hint b{color:#ffd38a;font-weight:600}
+#hint.gone{opacity:0}
+.credit{left:0;right:0;bottom:calc(22px + env(safe-area-inset-bottom));text-align:center;font-size:12px;letter-spacing:.08em;opacity:.75}
+.credit a{pointer-events:auto;color:#c9b8ff;text-decoration:none;font-weight:600}
+@media (min-width:800px){h1{font-size:17px}#hint{font-size:14px}.credit{font-size:13px}}
