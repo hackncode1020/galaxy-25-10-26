@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Cosmic Galaxy 🌌 — Made by @hack.n.code</title>
+<meta name="description" content="A 3D interactive spiral galaxy made with pure code. Drag to orbit, pinch to zoom, tap for a supernova.">
+<meta property="og:title" content="Cosmic Galaxy 🌌 — Made by @hack.n.code">
+<meta property="og:description" content="50,000 glowing stars you can orbit. Tap anywhere for a supernova 💥">
+<meta property="og:image" content="https://galaxy-hackncode.sites.tab.bot/preview.jpg">
+<meta name="theme-color" content="#02010a">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="flash"></div>
+<header class="ui top">
+  <div class="brand">
+    <div class="logo"></div>
+    <div>
+      <h1>Cosmic Galaxy</h1>
+      <p id="stat">0 stars · live</p>
+    </div>
+  </div>
+  <button id="snd" aria-label="Toggle sound" title="Sound">🔇</button>
+</header>
+<div id="hint" class="ui">Drag to orbit · Pinch to zoom · <b>Tap for a supernova</b></div>
+<footer class="ui credit">Made by <a href="https://instagram.com/hack.n.code" target="_blank" rel="noopener">@hack.n.code</a></footer>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js"}}</script>
+<script type="module" src="galaxy.js"></script>
+</body>
+</html>
